@@ -4,28 +4,30 @@ Repository to run codes from _<Real MySQL 8.0>_ from _Wikibooks_.
 
 ## How to Run
 
-1. Create a MySQL container.
+1. Extract `employees.zip` to the project root directory.
+
+2. Create a MySQL container.
 
    ```bash
    $ docker compose up
    ```
 
-2. Access MySQL shell.
+3. Access MySQL shell.
 
    ```bash
    $ docker compose exec db mysql -u root -p
    ```
 
-3. Enter password specified in `docker-compose.yml`.
+4. Enter password specified in `docker-compose.yml`.
 
-4. Insert initial data.
+5. Insert initial data.
 
    ```bash
    mysql> USE employees
    mysql> SOURCE /realmysql/employees.sql
    ```
 
-5. Wait for a (long) while and you're ready to run some queries.
+6. Wait for a (long) while and you're ready to run some queries.
 
 ## REF
 
