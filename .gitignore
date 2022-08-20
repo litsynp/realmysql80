@@ -1,0 +1,8 @@
+## IDE
+.idea
+
+## macOS
+.DS_Store
+
+## Large size SQL file
+employees.sql

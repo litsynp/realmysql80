@@ -1,0 +1,20 @@
+version: '3.8'
+
+volumes:
+  mysql_data:
+
+services:
+  db:
+    image: mysql:8.0.29-oracle
+    platform: linux/amd64
+    environment:
+      - MYSQL_DATABASE=employees
+      - MYSQL_ROOT_PASSWORD=testpass
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./:/realmysql/
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_0900_ai_ci
